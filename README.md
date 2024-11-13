@@ -1,7 +1,7 @@
 Kelas A
 Kelompok 10
 Daftar Anggota :
-I0324017 Lovela Cantika Wardhana / @lovelacantika
+I0324017 Lovela Cantika Wardhana / https://github.com/lovelacantika
 I0324038 Batra Sandy / @Batrasandy38
 I0324042 Daniswara Bharata / @DaniswaraBharata042
 # Aplikasi-pengiriman-paket
