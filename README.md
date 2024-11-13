@@ -10,4 +10,7 @@ Fitur - Fitur :
 1. Pilihan alamat yang nantinya akan dikirim barang
 2. Pilihan tanggal pengiriman
 3. Rincian Biaya
+4. Pilihan Berat
+
+DIAGRAM ALIR
 
