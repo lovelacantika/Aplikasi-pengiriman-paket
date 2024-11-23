@@ -14,5 +14,6 @@ Fitur - Fitur :
 4. Pilihan Berat
 
 DIAGRAM ALIR
-![image](https://github.com/user-attachments/assets/d8590037-82c4-4f03-bd2d-3acd9ae38124)
+![flow bhara (2)](https://github.com/user-attachments/assets/39448e00-185e-4f5b-8222-04b72f7e9a00)
+
 
