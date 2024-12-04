@@ -1,36 +1,30 @@
-{    "distance_prices": 
-    [
-    {"Semarang": [6000, "2 hari"],
-    "Magelang": [7000, "2 hari"],
-    "Kudus": [6000, "2 hari"],
-    "Pati": [8000, "3 hari"],
-    "Pekalongan": [10000,"3 hari"],
-    "Klaten": [5000, "1 hari"],
-    "Salatiga": [5500,"1 hari"],
-    "Tegal": [13000, "4 hari"],
-    "Banjarnegara": [10000, "3 hari"],
-    "Purwokerto": [10500, "3 hari"],
-    "Boyolali": [7000, "2 hari"],
-    "Sragen": [5000, "1 hari"],
-    "Cilacap": [15000, "4 hari"],
-    "Kendal": [8000, "3 hari"],
-    "Demak": [9000, "3 hari"],
-    "Sukoharjo": [4000, "1 hari"],
-    "Brebes" : [15000, "2 hari"],
-    "Blora" : [7000, "2 hari"],
-    "Pemalang" : [10000, "3 hari"],
-    "Rembang" : [7000, "2 hari"], 
-    "Jepara" : [10000, "3 hari"], 
-    "Wonosobo" : [7500, "2 hari"],
-    "Temanggung": [7000, "2 hari"],
-    "Karanganyar": [5000, "1 hari"], 
-    "Kebumen" : [10000, "3 hari"],
-    "Wonogiri": [5000, "1 hari"],
-    "Banyumas": [13000,"4 hari"],
-    "Purbalingga": [10000, "3 hari"], 
-    "Batang": [8000, "3 hari"], 
-    "Purworejo": [7500, "2 hari"],
-    "Grobogan": [5000, "1hari"]}
-    ]
+{
+    "Jawa Tengah": {
+        "Semarang": [5000, "2 hari"],
+        "Magelang": [4500, "2 hari"],
+        "Kudus": [6000, "3 hari"],
+        "Pati": [5500, "2 hari"]
+    },
+    "Jawa Barat": {
+        "Bandung": [10000, "3 hari"],
+        "Bogor": [9500, "2 hari"],
+        "Depok": [11000, "3 hari"],
+        "Cirebon": [12000, "3 hari"]
+    },
+    "Jawa Timur": {
+        "Surabaya": [12000, "4 hari"],
+        "Malang": [13000, "4 hari"],
+        "Blitar": [11500, "3 hari"],
+        "Kediri": [14000, "5 hari"]
+    },
+    "DKI Jakarta": {
+        "Jakarta": [12000, "5 hari"]
+        
+    },
+    "Banten":{
+        "Banten":[11000, "5 hari"]
+    },
+    "DI Yogyakarta": {
+        "Yogyakarta": [6000, "2 hari"]
+    }
 }
-
