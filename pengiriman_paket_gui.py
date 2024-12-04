@@ -1,6 +1,7 @@
 import json
 import tkinter as tk
 from tkinter import messagebox
+from tkinter import ttk
 
 # Fungsi untuk membaca data dari user.json
 def load_data():
@@ -37,7 +38,7 @@ def login():
         if user["username"] == username and user["password"] == password:
             messagebox.showinfo("Login Berhasil", f"Selamat datang, {username}!")
             root.destroy()
-            show_main_window()
+            main_window()
             return
     messagebox.showerror("Login Gagal", "Username atau password salah!")
 
@@ -93,7 +94,7 @@ def show_register_window():
     
     tk.Button(reg_window, text="Daftar", command=register, font=("Arial", 20)).place(x= 350, y= 375)
 # Fungsi untuk menampilkan jendela utama
-def show_main_window():
+def main_window():
     global city_var
     global sender_entry, receiver_entry, city_entry, weight_entry
     main_window = tk.Tk()
@@ -103,7 +104,7 @@ def show_main_window():
     tk.Label(main_window, text="Nama Pengirim:",font=("Arial",20)).place(x=75,y=50)
     sender_entry = tk.Entry(main_window,font=("Arial",20))
     sender_entry.place(x= 300, y=50)
-    
+      
     
     tk.Label(main_window, text="Nama Penerima:",font=("Arial",20)).place(x= 75, y=200 )
     receiver_entry = tk.Entry(main_window,font=("Arial",20))
@@ -111,27 +112,60 @@ def show_main_window():
 
 
 
-    city = [
-        "Semarang", "Magelang", "Kudus", "Pati", "Pekalongan", "Klaten",
-        "Salatiga", "Tegal", "Banjarnegara", "Purwokerto", "Boyolali",
-        "Sragen", "Cilacap", "Kendal", "Demak", "Sukoharjo", "Brebes",
-        "Blora", "Pemalang", "Rembang", "Jepara", "Wonosobo", "Temanggung", 
-        "Karanganyar", "Kebumen", "Wonogiri", "Banyumas", "Purbalingga", 
-        "Batang", "Purworejo", "Grobogan"
-    ] 
+provinces = ["Jawa Barat", "Jawa Tengah", "Jawa Timur", "DKI Jakarta", "Banten"]
+city = {
+    "Jawa Barat": ["Bandung", "Bogor", "Bekasi", "Depok", "Cirebon"],
+    "Jawa Tengah": ["Semarang", "Magelang", "Kudus", "Pati", "Pekalongan"],
+    "Jawa Timur": ["Surabaya", "Malang", "Kediri", "Blitar", "Madiun"],
+    "DKI Jakarta": ["Jakarta Pusat", "Jakarta Timur", "Jakarta Barat", "Jakarta Selatan", "Jakarta Utara"],
+    "Banten": ["Serang", "Tangerang", "Cilegon", "Lebak", "Pandeglang"]
+}
 
-    city_var = tk.StringVar(value="")
-    tk.Label(main_window, text="Kota Tujuan:",font=("Arial",20)).place(x= 75, y=350)
-    city_entry = tk.OptionMenu(main_window, city_var, *city)
-    city_entry.config(font=("Arial", 15))
-    city_entry.place(x= 300, y=350)
+# Fungsi untuk memperbarui kota berdasarkan provinsi
+def update_city(event):
+    global province_combobox, city_combobox  # Tambahkan deklarasi global
+    selected_province = province_combobox.get()
+    city_combobox["values"] = city.get(selected_province, [])  # Mengisi kota sesuai provinsi
+    city_combobox.set("")  # Reset pilihan kota
+
+def main_window():
+    global sender_entry, receiver_entry, province_combobox, city_combobox, weight_entry
+
+    # Membuat jendela utama
+    main_window = tk.Tk()
+    main_window.geometry("700x700")
+    main_window.title("Pengiriman Paket")
+
+    # Input Nama Pengirim
+    tk.Label(main_window, text="Nama Pengirim:", font=("Arial", 20)).place(x=75, y=50)
+    sender_entry = tk.Entry(main_window, font=("Arial", 20))
+    sender_entry.place(x=300, y=50)
+
+    # Input Nama Penerima
+    tk.Label(main_window, text="Nama Penerima:", font=("Arial", 20)).place(x=75, y=150)
+    receiver_entry = tk.Entry(main_window, font=("Arial", 20))
+    receiver_entry.place(x=300, y=150)
+
+    # Dropdown Provinsi
+    tk.Label(main_window, text="Provinsi Tujuan:", font=("Arial", 20)).place(x=75, y=250)
+    province_combobox = ttk.Combobox(main_window, values=provinces, state="readonly", font=("Arial", 15))
+    province_combobox.place(x=300, y=250)
+    province_combobox.bind("<<ComboboxSelected>>", update_city)
+
+    # Dropdown Kota
+    tk.Label(main_window, text="Kota Tujuan:", font=("Arial", 20)).place(x=75, y=350)
+    city_combobox = ttk.Combobox(main_window, values=[], state="readonly", font=("Arial", 15))
+    city_combobox.place(x=300, y=350)
     
-    tk.Label(main_window, text="Berat Paket (kg):",font=("Arial",20)).place(x= 75, y=500)
-    weight_entry = tk.Entry(main_window,font=("Arial",20))
-    weight_entry.place(x= 300, y=500)
+    # Input Berat Paket
+    tk.Label( main_window, text="Berat Paket (kg):", font=("Arial", 20)).place(x=75, y=450)
+    weight_entry = tk.Entry(main_window, font=("Arial", 20))
+    weight_entry.place(x=300, y=450)
     
-    tk.Button(main_window, text="Hitung Biaya", command=calculate_cost,font=("Arial",15)).place(x=280,y=580)
-    
+    # Tombol Kirim
+
+    tk.Button(main_window, text="Hitung Biaya", command=calculate_cost,font=("Arial",15)).place(x=280,y=580) 
+
     main_window.mainloop()
 
 # Fungsi untuk menghitung biaya pengiriman
@@ -140,7 +174,8 @@ def calculate_cost():
     hasil.geometry("400x400")
     sender = sender_entry.get()
     receiver = receiver_entry.get()
-    city = city_var.get()
+    provinces = provinces.get()
+    city = city.get()
     weight = weight_entry.get()
     data_harga = load_harga()
     
@@ -202,4 +237,5 @@ if __name__ == "__main__":
         
         tk.Button(root, text="Login", command=login,font=("Arial", 20)).place(x= 150, y= 375)
         tk.Button(root, text="Register", command=show_register_window,font=("Arial", 20)).place(x= 410, y= 375)
+        
         root.mainloop()
