@@ -17,5 +17,7 @@ Aplikasi untuk mencatat biaya dalam pengiriman paket. Aplikasi untuk menyediakan
 ![flow bhara (2)](https://github.com/user-attachments/assets/39448e00-185e-4f5b-8222-04b72f7e9a00)
 
 #DIAGRAM ALIR REVISI
+![FLOWCHART FIX](https://github.com/user-attachments/assets/d56da1df-620d-4862-ab36-d5e90a1f7a2d)
+
 
 
