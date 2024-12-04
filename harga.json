@@ -4,21 +4,31 @@
         "Magelang": [4500, "2 hari"],
         "Kudus": [6000, "3 hari"],
         "Pati": [5500, "2 hari"],
+        "Demak": [7000, "2 hari"],
+        "Jepara": [7000, "2 hari"],
         "Salatiga": [4000, "1 hari"],
         "Karangayar": [4000, "1 hari"],
-        "Sragen" 
+        "Sragen" : [4000, "1 hari"],
+        "Sukoharjo": [4000, "1 hari"]
     },
     "Jawa Barat": {
         "Bandung": [10000, "3 hari"],
         "Bogor": [9500, "2 hari"],
         "Depok": [11000, "3 hari"],
-        "Cirebon": [12000, "3 hari"]
+        "Cirebon": [12000, "3 hari"],
+        "Tasikmalaya": [11000, "3 hari"],
+        "Cimahi" : [11000, "3 hari"],
+        "Cirebon": [11000, "3 hari"],
+        "Sumedang": [13000, "4 hari"]
     },
     "Jawa Timur": {
         "Surabaya": [12000, "4 hari"],
         "Malang": [13000, "4 hari"],
+        "Batu": [13000, "4 hari"],
+        "Probolinggo": [12000, "4 hari"],
         "Blitar": [11500, "3 hari"],
-        "Kediri": [14000, "5 hari"]
+        "Kediri": [14000, "5 hari"],
+        "Madiun": [13000, "4 hari"]
     },
     "DKI Jakarta": {
         "Jakarta": [12000, "5 hari"]
