@@ -3,7 +3,10 @@
         "Semarang": [5000, "2 hari"],
         "Magelang": [4500, "2 hari"],
         "Kudus": [6000, "3 hari"],
-        "Pati": [5500, "2 hari"]
+        "Pati": [5500, "2 hari"],
+        "Salatiga": [4000, "1 hari"],
+        "Karangayar": [4000, "1 hari"],
+        "Sragen" 
     },
     "Jawa Barat": {
         "Bandung": [10000, "3 hari"],
