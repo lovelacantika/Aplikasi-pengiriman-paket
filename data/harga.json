@@ -1,42 +1,53 @@
 {
     "Jawa Tengah": {
-        "Semarang": [5000, "2 hari"],
-        "Magelang": [4500, "2 hari"],
-        "Kudus": [6000, "3 hari"],
-        "Pati": [5500, "2 hari"],
-        "Demak": [7000, "2 hari"],
-        "Jepara": [7000, "2 hari"],
-        "Salatiga": [4000, "1 hari"],
-        "Karangayar": [4000, "1 hari"],
-        "Sragen" : [4000, "1 hari"],
-        "Sukoharjo": [4000, "1 hari"]
+        "Semarang": [5000, "2 "],
+        "Magelang": [4500, "2 "],
+        "Kudus": [6000, "3 "],
+        "Pati": [5500, "2 "],
+        "Demak": [7000, "2 "],
+        "Jepara": [7000, "2 "],
+        "Salatiga": [4000, "1 "],
+        "Karangayar": [4000, "1 "],
+        "Sragen" : [4000, "1 "],
+        "Sukoharjo": [4000, "1 "],
+        "Pekalongan": [5000, "1 "]
     },
     "Jawa Barat": {
-        "Bandung": [10000, "3 hari"],
-        "Bogor": [9500, "2 hari"],
-        "Depok": [11000, "3 hari"],
-        "Cirebon": [12000, "3 hari"],
-        "Tasikmalaya": [11000, "3 hari"],
-        "Cimahi" : [11000, "3 hari"],
-        "Sumedang": [13000, "4 hari"]
+        "Bandung": [10000, "3 "],
+        "Bogor": [9500, "2 "],
+        "Depok": [11000, "3 "],
+        "Cirebon": [12000, "3 "],
+        "Tasikmalaya": [11000, "3 "],
+        "Cimahi" : [11000, "3 "],
+        "Sumedang": [13000, "4 "],
+        "Bekasi" : [12000, "4 "]
     },
     "Jawa Timur": {
-        "Surabaya": [12000, "4 hari"],
-        "Malang": [13000, "4 hari"],
-        "Batu": [13000, "4 hari"],
-        "Probolinggo": [12000, "4 hari"],
-        "Blitar": [11500, "3 hari"],
-        "Kediri": [14000, "5 hari"],
-        "Madiun": [13000, "4 hari"]
+        "Surabaya": [12000, "4 "],
+        "Malang": [13000, "4 "],
+        "Batu": [13000, "4 "],
+        "Probolinggo": [12000, "4 "],
+        "Blitar": [11500, "3 "],
+        "Kediri": [14000, "5 "],
+        "Madiun": [13000, "4 "]
     },
     "DKI Jakarta": {
-        "Jakarta": [12000, "5 hari"]
+        "Jakarta Pusat": [13000, "5 "],
+        "Jakarta Timur": [12000, "5 "],
+        "Jakarta Barat": [12000,"5 "],
+        "Jakarta Selatan": [14000,"5 "],
+        "Jakarta Utara": [13000, "5 "]
         
     },
     "Banten":{
-        "Banten":[11000, "5 hari"]
+        "Serang":[13000, "6 "],
+        "Tangerang": [14000, "6 "],
+        "Cilegon": [14000, "6 "],
+        "Lebak": [15000, "6 "],
+        "Pandeglang": [16000, "6 "]
     },
     "DI Yogyakarta": {
-        "Yogyakarta": [6000, "2 hari"]
+        "Yogyakarta": [6000, "2"]
     }
-}
+
+ }

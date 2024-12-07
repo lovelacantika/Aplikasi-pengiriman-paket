@@ -20,3 +20,18 @@ def save_json(data, file_path):
             json.dump(data, file, indent=4)
     except Exception as e:
         messagebox.showerror("Error", f"Gagal menyimpan data: {e}")
+
+def load_harga():
+    try:
+        with open("data/harga.json", "r") as file:
+            return json.load(file)
+    except FileNotFoundError:
+        messagebox.showerror("Error", "File harga.json tidak ditemukan!")
+    return None
+def load_data():
+    try:
+        with open("data/user.json", "r") as file:
+            return json.load(file)
+    except FileNotFoundError:
+        messagebox.showerror("Error", "File user.json tidak ditemukan!")
+        return None
