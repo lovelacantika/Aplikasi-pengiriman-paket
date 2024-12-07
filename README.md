@@ -21,7 +21,11 @@ Aplikasi untuk mencatat biaya dalam pengiriman paket. Aplikasi untuk menyediakan
 
 #DIAGRAM ALIR REVISI
 
-![FLOWCHART FIX](https://github.com/user-attachments/assets/d56da1df-620d-4862-ab36-d5e90a1f7a2d)
+![revisi flowchart](https://github.com/user-attachments/assets/d24c546f-b7f6-4f9a-bec8-650eb940d2b9)
+
+
+
+
 
 
 
