@@ -7,7 +7,7 @@ I0324042 Daniswara Bharata / https://github.com/DaniswaraBharata042
 # Aplikasi-pengiriman-paket
 Aplikasi untuk mencatat biaya dalam pengiriman paket. Aplikasi untuk menyediakan tanggal paket diantarkan dan perkiraan sampai di tujuan. Customer dapat login apabila memiliki username dan password yang sudah terdaftar. Apabila belum memiliki username dan password maka Customer dapat registrasi terlebih dahulu. Customer akan mendapat output tanggal pengiriman, perkiraan barang sampai, dan biaya pengiriman paket tersebut
 
-*#Fitur - Fitur* : 
+_Fitur - Fitur_ : 
 1. Pengiriman paket dapat dikirimkan di Provinsi dan Kota yang ada di Pulau Jawa
 2. Pilihan tanggal pengiriman
 3. Rincian Biaya pengiriman
