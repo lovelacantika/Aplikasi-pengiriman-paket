@@ -29,6 +29,13 @@ Pengirim dapat login dengan memasukkan username dan password. Apabila belum memi
 **SITE MAP**
 ![Green Modern Ecommerce Site Map (1)](https://github.com/user-attachments/assets/9f55ab6d-fe2e-4c8f-b5ea-07139b0d3563)
 
+**LIBRARY**
+1. Tkinter
+2. Tkcalendar
+3. Pillow
+4. Smtplib
+
+
 
 
 
