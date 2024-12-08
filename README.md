@@ -23,6 +23,8 @@ Aplikasi untuk mencatat biaya dalam pengiriman paket. Aplikasi untuk menyediakan
 
 ![revisi flowchart](https://github.com/user-attachments/assets/d24c546f-b7f6-4f9a-bec8-650eb940d2b9)
 
+Penjelasan diagram alir :
+Pengirim dapat login dengan memasukkan username dan password. Apabila belum memiliki akun maka bisa registrasi terlebih dahulu dengan menginput nama dan password. Ketika login berhasil, maka pengirim dapat memasukkan nama pengirim, nama penerima, serta dapat memilih berbagai opsi untuk provinsi serta kota yang ada di Pulau Jawa. Lalu bisa memasukkan berat paket yang tidak boleh lebih dari 15 kg. Sehingga, rincian harga dapat dihitung melalui harga dasar dari berat paket tersebut dan ditambah harga jarak kota penerima dengan pengirim. Dan akirnya bisa cetak invoice yang nantinya akan dikirim melalui email yang sudah didaftarkan.
 
 
 
