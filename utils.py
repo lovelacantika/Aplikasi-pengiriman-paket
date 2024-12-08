@@ -16,8 +16,8 @@ def load_json(file_path):
 def save_json(data, file_path):
     """Menyimpan data ke file JSON."""
     try:
-        with open(file_path, "w") as file:
-            json.dump(data, file_path, indent=4)
+        with open(file_path, "w") as f:
+            json.dump(data, f, indent=2)
     except Exception as e:
         messagebox.showerror("Error", f"Gagal menyimpan data: {e}")
     

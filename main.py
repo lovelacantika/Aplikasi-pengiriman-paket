@@ -1,5 +1,5 @@
 import tkinter as tk
-from auth import login, register,load_json,load_harga
+from auth import login, register
 from PIL import Image, ImageTk
 from tkinter import messagebox
 from menu import main_menu
@@ -27,7 +27,7 @@ def create_login_window():
 
     # Memuat gambar latar belakang dan mengubah ukurannya
     original_image = Image.open("login.png")  # Ganti dengan path file gambar Anda
-    resized_image = original_image.resize((1550, 1080))  # Sesuaikan ukuran dengan jendela
+    resized_image = original_image.resize((1300, 700))  # Sesuaikan ukuran dengan jendela
     background_image = ImageTk.PhotoImage(resized_image)
 
     # Membuat Canvas dan menambahkan gambar
@@ -63,8 +63,8 @@ def register_user(username_entry, password_entry, reg_window):
     username = username_entry.get()  # Ambil input dari entry
     password = password_entry.get()  # Ambil input dari entry
     if register(username, password):  # Fungsi `register` dari `auth`
-        reg_window.destroy()
         messagebox.showinfo("Sukses", "Registrasi berhasil!")
+        reg_window.destroy()
         main_menu()
     else:
         messagebox.showerror("Error", "Username sudah digunakan atau input tidak valid!")
@@ -77,7 +77,7 @@ def create_register_window():
 
     # Memuat gambar latar belakang dan mengubah ukurannya
     original_image = Image.open("optionkota.png")  # Ganti dengan path file gambar Anda
-    resized_image = original_image.resize((1920, 1080))  # Sesuaikan ukuran dengan jendela
+    resized_image = original_image.resize((1300, 700))  # Sesuaikan ukuran dengan jendela
     background_image = ImageTk.PhotoImage(resized_image)
 
     # Membuat Canvas dan menambahkan gambar

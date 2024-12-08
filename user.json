@@ -1,60 +1,26 @@
-{
-    "users": [
-        {
-            "username": "admin",
-            "password": "12345"
-        },
-        {
-            "username": "bhara",
-            "password": "1234"
-        },
-        {
-            "username": "bhara",
-            "password": "1234"
-        },
-        {
-            "username": "lovela",
-            "password": "cantik"
-        },
-        {
-            "username": "lovela",
-            "password": "cantik"
-        },
-        {
-            "username": "sandy",
-            "password": "ganteng"
-        },
-        {
-            "username": "sandy",
-            "password": "ganteng"
-        },
-        {
-            "username": "shinto",
-            "password": "aneh"
-        },
-        {
-            "username": "shinto",
-            "password": "aneh"
-        },
-        {
-            "username": "Daffa",
-            "password": "BAIK"
-        },
-        {
-            "username": "Daffa",
-            "password": "BAIK"
-        },
-        {
-            "username": "fathan",
-            "password": "korti24"
-        },
-        {
-            "username": "fathan",
-            "password": "korti24"
-        },
-        {
-            "username": "aaaa",
-            "password": "aaaa"
-        }
-    ]
-}
+[
+  {
+    "username": "adwwa",
+    "password": "111"
+  },
+  {
+    "username": "iza",
+    "password": "111"
+  },
+  {
+    "username": "ppp",
+    "password": "0000"
+  },
+  {
+    "username": "ppppp",
+    "password": "000"
+  },
+  {
+    "username": "admin",
+    "password": "123"
+  },
+  {
+    "username": "jono",
+    "password": "123"
+  }
+]

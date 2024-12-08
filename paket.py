@@ -2,7 +2,9 @@ import tkinter as tk
 from tkinter import messagebox, ttk
 from tkcalendar import DateEntry
 from datetime import datetime, timedelta
-from auth import load_json,load_harga
+from auth import load_json
+from PIL import Image, ImageTk
+import thanks as ths
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -14,9 +16,12 @@ try:
 except Exception as e:
     print(f"Error koneksi: {e}")
     
-def calculate_cost():
-    hasil= tk.Toplevel()
-    hasil.geometry("400x400")
+def calculate_cost(main_window):
+    def to_thanks():
+        hasil.destroy()
+        ths.thanks_page()
+    hasil= tk.Tk()
+    hasil.geometry("1920x1080")
     """Menghitung biaya pengiriman berdasarkan input."""
     sender = sender_entry.get()
     receiver= receiver_entry.get()
@@ -74,7 +79,7 @@ def calculate_cost():
         f"Total Biaya       : Rp {total_cost}\n"
         f"Estimasi Sampai   : {delivery_date}"
     )
-    tk.Label(hasil, text= result, font=("Arial", 12)).pack(pady=10)
+    tk.Label(hasil, text= result, font=("Arial", 12)).place(y=200, x=300)
     
     # Contoh penggunaan
     email_terima = email_sender  # Ganti dengan email penerima yang diinput
@@ -82,54 +87,65 @@ def calculate_cost():
     sender, receiver, city_selected ,weight, shipment_date, delivery_date, total_cost, email_terima)
     if email_sent:
        messagebox.showinfo("Sukses", "Invoice berhasil dikirim ke email!")
+       main_window.destroy()
     else:
        messagebox.showerror("Error", "Gagal mengirim invoice ke email!")
 
-    
-    
-    
+    tk.Button(hasil, text="Hitung Biaya", command=to_thanks, font=("Arial", 15)).place(y=500, x=300)
+    hasil.mainloop()
+
 
 def main_window():
+    def hitung_biaya():
+        main_window.withdraw()
+        calculate_cost(main_window)
+
     """Menampilkan jendela input pengiriman paket."""
     global sender_entry, receiver_entry,email_entry, province_combobox, city_combobox, weight_entry, date_entry
     main_window = tk.Tk()
-    main_window.geometry("600x700")
+    main_window.geometry("940x1080")
     main_window.title("Pengiriman Paket")
+    resi_image = Image.open("resi.png.png")  # Ganti dengan path file gambar Anda
+    resized_resi = resi_image.resize((1300, 700))  # Sesuaikan ukuran dengan jendela
+    background_image = ImageTk.PhotoImage(resized_resi)
+    canvas = tk.Canvas(main_window, width=1920, height=1080)
+    canvas.pack(fill="both", expand=True)
+    canvas.create_image(0, 0, image=background_image, anchor="nw")
 
     # Form input
     tk.Label(main_window, text="Nama Pengirim:", font=("Arial", 16)).place(x=75, y=50)
     sender_entry = tk.Entry(main_window, font=("Arial", 16))
     sender_entry.place(x=300, y=50)
-    tk.Label(main_window, text="Nama Penerima:", font=("Arial", 16)).place(x=75, y=150)
+    tk.Label(main_window, text="Nama Penerima:", font=("Arial", 16)).place(x=75, y=100)
     receiver_entry = tk.Entry(main_window, font=("Arial", 16))
-    receiver_entry.place(x=300, y=150)
-    tk.Label(main_window, text="email:", font=("Arial", 16)).place(x=75, y=200)
+    receiver_entry.place(x=300, y=100)
+    tk.Label(main_window, text="email:", font=("Arial", 16)).place(x=75, y=150)
     email_entry = tk.Entry(main_window, font=("Arial", 16))
-    email_entry.place(x=300, y=200)
+    email_entry.place(x=300, y=150)
     # Dropdown Provinsi
-    tk.Label(main_window, text="Provinsi Tujuan:", font=("Arial", 16)).place(x=75, y=250)
+    tk.Label(main_window, text="Provinsi Tujuan:", font=("Arial", 16)).place(x=75, y=200)
     province_combobox = ttk.Combobox(main_window, values=provinces, state="readonly", font=("Arial", 15))
-    province_combobox.place(x=300, y=250)
+    province_combobox.place(x=300, y=200)
     province_combobox.bind("<<ComboboxSelected>>", update_city)
 
     # Dropdown Kota
-    tk.Label(main_window, text="Kota Tujuan:", font=("Arial", 16)).place(x=75, y=350)
+    tk.Label(main_window, text="Kota Tujuan:", font=("Arial", 16)).place(x=75, y=250)
     city_combobox = ttk.Combobox(main_window, values=[], state="readonly", font=("Arial", 15))
-    city_combobox.place(x=300, y=350)
+    city_combobox.place(x=300, y=250)
 
     # Input Berat Paket
-    tk.Label(main_window, text="Berat Paket (kg):", font=("Arial", 16)).place(x=75, y=450)
+    tk.Label(main_window, text="Berat Paket (kg):", font=("Arial", 16)).place(x=75, y=300)
     weight_entry = tk.Entry(main_window, font=("Arial", 16))
-    weight_entry.place(x=300, y=450)
+    weight_entry.place(x=300, y=300)
 
     # Input Tanggal Pengiriman
-    tk.Label(main_window, text="Tanggal Pengiriman:", font=("Arial", 16)).place(x=75, y=550)
+    tk.Label(main_window, text="Tanggal Pengiriman:", font=("Arial", 16)).place(x=75, y=350)
     date_entry = DateEntry(main_window, width=18, background="darkblue", foreground="white", font=("Arial", 15), date_pattern="dd-mm-yyyy")
-    date_entry.place(x=300, y=550)
+    date_entry.place(x=300, y=350)
 
     # Tambahan form lainnya...
 
-    tk.Button(main_window, text="Hitung Biaya", command=calculate_cost, font=("Arial", 15)).place(x=280, y=630)
+    tk.Button(main_window, text="Hitung Biaya", command=hitung_biaya, font=("Arial", 15)).place(x=200, y=500)
     main_window.mainloop()
     
 def update_city(event):
@@ -144,7 +160,7 @@ city = {
     "DKI Jakarta": ["Jakarta Pusat", "Jakarta Timur", "Jakarta Barat", "Jakarta Selatan", "Jakarta Utara"],
     "Banten": ["Serang", "Tangerang", "Cilegon", "Lebak", "Pandeglang"],
     "D.I.Yogyakarta": ["Yogyakarta"] 
-}
+    }
 
 def send_invoice_email(sender, receiver, city, weight, shipment_date, delivery_date, total_cost, email):
     try:
