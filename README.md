@@ -5,7 +5,7 @@ I0324017 Lovela Cantika Wardhana / https://github.com/lovelacantika
 I0324038 Batra Sandy / https://github.com/Batrasandy46
 I0324042 Daniswara Bharata / https://github.com/DaniswaraBharata042
 # Aplikasi-pengiriman-paket
-Aplikasi untuk mencatat biaya dalam pengiriman paket. Aplikasi untuk menyediakan tanggal paket diantarkan dan perkiraan sampai di tujuan. Customer dapat login apabila memiliki username dan password yang sudah terdaftar. Apabila belum memiliki username dan password maka Customer dapat registrasi terlebih dahulu. Customer akan mendapat output tanggal pengiriman, perkiraan barang sampai, dan biaya pengiriman paket tersebut
+Aplikasi untuk mencatat biaya dalam pengiriman paket. Paket akan diantar dari Kota Solo menuju kota tujuan. Aplikasi ini akan menyediakan tanggal paket diantarkan dan perkiraan sampai di tujuan. Customer dapat login apabila memiliki username dan password yang sudah terdaftar. Apabila belum memiliki username dan password maka Customer dapat registrasi terlebih dahulu. Customer akan mendapat output tanggal pengiriman, perkiraan barang sampai, dan biaya pengiriman paket tersebut yang nantinya akan dikirim melalui email dalam bentuk invoice.
 
 **#Fitur - Fitur** : 
 1. Pengiriman paket dapat dikirimkan di Provinsi dan Kota yang ada di Pulau Jawa
